@@ -19,7 +19,7 @@ var Thread = require('./models/threads');
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
-mongoose.connect("mongodb+srv://SachinKumarGupta:testpasss@cluster0.hm3no.mongodb.net/forum", { useNewUrlParser: true });
+mongoose.connect("Enter Database URI here", { useNewUrlParser: true });
 
 
 app.use(bodyParser.urlencoded({extended: false}));
