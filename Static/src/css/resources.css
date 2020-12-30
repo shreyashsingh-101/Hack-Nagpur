@@ -1,0 +1,504 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+/*  Selection   */
+  ::selection{
+    background-color: rgb(163, 8, 235);
+    color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px 6px pink;
+  }
+
+
+
+/* NAV PROF */
+
+#profile-picture{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+
+body{
+    background-color: #111;
+}
+/* Main-Content */
+
+.items
+{
+  display:grid;
+  grid-template-columns: 20% 20% 20% 20%;
+  grid-column-gap:5%;
+  justify-self:center;
+}
+/* CARDS-SECTION */
+.card
+{
+    display: grid;
+    grid-template-rows: 45% 8% 25% 8%;
+    margin:35px 10px 15px 25px;
+    /* border: 2px solid #8B008B;*/
+    border-radius: 5px;
+    box-shadow: 10px 10px 5px #120635;
+    background-color: #e5e4e2 ;
+    height:90%;
+    width:100%;
+} 
+.card:hover
+{
+  /* box-shadow: 10px 10px 5px #81108b; */
+  transform: scale(1.1);
+  transition-timing-function: linear;
+  transition-duration: 150ms;
+}
+#card-head
+{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #140638;
+  padding: 8px;
+  margin-top: -10%;
+}
+#card-body
+{
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+  margin-left:5px;
+  color:rgb(2, 2, 2);
+  font-size: 18px;
+  padding:10px;
+}
+#card-foot
+{
+  display: flex;
+  flex-direction: row;
+  justify-content:center !important;
+  margin-top: 4em;
+  color:greenyellow;
+}
+#card-button
+{
+    margin-top: 20%;
+    color: white;
+    margin-left: 20px;
+    background-color: #5C1671;
+    width: 85%;
+    height: 2.3em;
+    letter-spacing: 2px;
+    font-size: 15px;
+    border: none;
+}
+#card-button:hover
+{
+  background-color: #af2ad8;
+}
+#card-img-top
+{
+    width:100%;
+    height: 10.5em;
+    border-radius: 5px;
+}
+/* MODAL-FOR-CP */
+#popup1 {
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100vw;
+  height:100vh;
+  background:rgba(0,0,0,0.75);
+  display:none;
+}
+#popup1 .popup-content {
+  position:absolute;
+  top:50%;
+  left:53%;
+  transform:translate(-50%,-50%);
+  width:70vw;
+  height:85vh;
+  padding:10px 20px;
+  background:#eee;
+  border-radius: 5px;
+}
+#popup1 a
+{
+  text-decoration: none;
+}
+#popup1 a:hover
+{
+  text-decoration:underline;
+}
+#popup1 a.close-popup {
+  position:absolute;
+  top:5px;
+  right:10px;
+  font-size:20px;
+  font-weight:600;
+  text-decoration:none;
+  color: red;
+}
+#popup1:target {
+  display:block;
+}
+
+/* MODAL-FOR-BLOGS */
+#popup2 {
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100vw;
+  height:100vh;
+  background:rgba(0,0,0,0.75);
+  display:none;
+}
+#popup2 .popup-content {
+  position:absolute;
+  top:50%;
+  left:53%;
+  transform:translate(-50%,-50%);
+  width:70vw;
+  height:85vh;
+  padding:10px 20px;
+  background:#eee;
+  border-radius: 5px;
+}
+#popup2 a
+{
+  text-decoration: none;
+}
+#popup2 a:hover
+{
+  text-decoration:underline;
+}
+#popup2 a.close-popup {
+  position:absolute;
+  top:5px;
+  right:10px;
+  font-size:20px;
+  font-weight:600;
+  text-decoration:none;
+  color: red;
+}
+#popup2:target {
+  display:block;
+}
+
+/* MODAL-FOR-COURSES */
+#popup3 {
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100vw;
+  height:100vh;
+  background:rgba(0,0,0,0.75);
+  display:none;
+}
+#popup3 .popup-content {
+  position:absolute;
+  top:50%;
+  left:53%;
+  transform:translate(-50%,-50%);
+  width:70vw;
+  height:85vh;
+  padding:10px 20px;
+  background:#eee;
+  border-radius: 5px;
+}
+#popup3 a
+{
+  text-decoration: none;
+}
+#popup3 a:hover
+{
+  text-decoration:underline;
+}
+#popup3 a.close-popup {
+  position:absolute;
+  top:5px;
+  right:10px;
+  font-size:20px;
+  font-weight:600;
+  text-decoration:none;
+  color: red;
+}
+#popup3:target {
+  display:block;
+}
+
+/* MODAL-FOR-INTERVIEW */
+#popup4 {
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100vw;
+  height:100vh;
+  background:rgba(0,0,0,0.75);
+  display:none;
+}
+#popup4 .popup-content {
+  position:absolute;
+  top:50%;
+  left:53%;
+  transform:translate(-50%,-50%);
+  width:70vw;
+  height:85vh;
+  padding:10px 20px;
+  background:#eee;
+  border-radius: 5px;
+}
+#popup4 a
+{
+  text-decoration: none;
+}
+#popup4 a:hover
+{
+  text-decoration:underline;
+}
+#popup4 a.close-popup {
+  position:absolute;
+  top:5px;
+  right:10px;
+  font-size:20px;
+  font-weight:600;
+  text-decoration:none;
+  color: red;
+}
+#popup4:target {
+  display:block;
+}
+
+.popup-content{
+  background-color: rgba(19, 19, 19, 0.705) !important;
+}
+.modal-body
+{
+  /* display: grid;
+  grid-template-columns: 20% 20% 20% 20%;
+  grid-column-gap:5%; */
+  overflow: auto;
+ 
+  border-radius: 5px;
+  height: 80%;
+  padding: 20px;
+  margin-top: 5%;
+}
+.modal-body h2
+{
+  font-size: 30px;
+  color: #000000;
+}
+.modal-body h3
+{
+  padding: 5px;
+  font-size: 20px;
+  color: #000000;
+}
+.modal-body p
+{
+  font-size:20px;
+  padding-top: 1%;
+  color: #000000;
+}
+.modal-body div{
+  font-size: .6em;
+  margin: 10px;
+  margin-top: 30px;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 0 15px 2px rgb(59, 59, 59);
+  height: auto;
+  transition: all .3s ;
+}
+
+.modal-body div:hover{
+  transform: scale(1.05);
+  transition: all .3s ease-in-out ;
+}
+/* #popup2:target {
+  display:block;
+}
+#popup3:target {
+  display:block;
+}
+#popup4:target {
+  display:block;
+} */
+#modal-head
+{
+ 
+  position: relative;
+  text-align:center ;
+  margin-top: 30px;
+}
+
+.navbar{
+    background-color: rgba(0, 0, 0, 0.507);
+    height: 60px;
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.title{
+    text-align: center;
+    margin: 10px;
+    padding:10px;
+    margin-left: 40px;
+}
+
+.title h1 a{
+  text-decoration: none;
+  cursor: pointer;
+}
+.sign{
+    margin: 10px;
+    padding:10px;
+    position: fixed;
+    right: 0;
+    display:flex;
+}
+
+
+/* Side-nav */
+
+/* The side navigation menu */
+
+#nav-button{
+    font-size: 2em;
+    text-align: center;
+    color:#000000;
+    cursor: pointer;
+}
+
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 10vh; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    left: 0;
+    top: 0;
+    background-color: rgba(2, 1, 51, 0.658); /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 10px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    margin-top: 60px;
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+  }
+ 
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    background-color: rgb(226, 11, 230);
+    box-shadow:  2px 2px 30px 4px rgb(137, 4, 247) ;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 2em;
+    margin-left: 50px;
+    cursor: pointer;
+  }
+  
+ 
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+
+  /* Main section */
+
+
+  .main-page{
+      transform: translateX(5vh);
+      border-radius: 20px;
+      height: 80vh;
+      width: 85vw;
+      margin: auto;
+      margin-top: 90px;
+      padding: 40px;
+      background-color: rgb(236, 236, 236);
+      box-shadow:  0px 0px 300px 30px rgb(184, 29, 231),8px 4px 20px 2px rgb(184, 29, 231), -2px -1px 20px 2px rgb(184, 29, 231);
+  }
+  .heading{
+      color: black;
+      font-size: 2em;
+      text-align: center;
+      margin-top: 3px;
+  }
+
+
+  
+/* Scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+  width: 13px;
+  height:50%;
+  
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: none;
+  margin-right: 10px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(165, 165, 165, 0.712);
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+
+/* input */
+
+
+#myInput{
+  width: 100%;
+  border: none;
+  margin: auto;
+  padding: 10px;
+  color: black;
+  margin-bottom: 10px;
+  box-shadow: 0px 0px 12px 2px lightgray;
+  font-size: 1.2em;
+ 
+}

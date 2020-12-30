@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Coders Adda</title>
+    <script src="https://kit.fontawesome.com/8ef24dea6d.js" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-firestore.js"></script>
+    <link rel="stylesheet" type="text/css" href="src/css/resources.css">
+    
+</head>
+
+<body>
+
+
+    <nav class="navbar">
+        <div class="title">
+            <h1>
+              <a href="index.html">// THE CODERS ADDA //</a>  
+            </h1>
+        </div>
+        <div class="sign">
+            <h2 class="forSearch">
+                <h2 id="login-button" style="display: none;">
+                    Sign In
+                </h2>
+                <h2 id="logout-button" style="display: none;">Logout</h2>
+            </h2>
+            <div class="container">
+                <div class="profile-section">
+                    <a href="profile.html"><img id="profile-picture" src="src/images/profile.jpg" /></a>
+                    <div id="profile-name"></div>
+                </div>
+
+
+            </div>
+        </div>
+    </nav>
+    <div id="dash"></div>
+
+    <div id="Sidenav" class="sidenav">
+        <span id="nav-button" style="display:block" onclick="openNav()"><i class="fas fa-bars"></i></span>
+        <div id="int-sec" style="display:none">
+            <span href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fas fa-times"></i></span>
+            <br>
+            <br>
+            <a href="resources.html"><i class="far fa-hand-point-right"></i> Resources</a><br>
+            <a href="forum.html"><i class="far fa-hand-point-right"></i> Doubt</a> <br>
+            <a href="team-finder.html"><i class="far fa-hand-point-right"></i> Team Finder</a><br>
+            <a href="productifier.html"><i class="far fa-hand-point-right"></i> Productivity &emsp; Tracker</a>
+        </div>
+    </div>
+
+
+
+    <div class="main-page">
+        <h1 class="heading">
+            Resources
+        </h1>
+        
+        <div class="items">
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://gettechanswer.com/wp-content/uploads/2020/06/Start-Competitive-Programming.png" id="card-img-top" alt="">
+                </div>
+                <div class="card-head">
+                    <h3 id="card-head">COMPETITIVE PROGRAMMING</h3>
+                    
+                </div>
+                <div class="card-body">
+                    <h5 id="card-body">Got you some of the most sought after links related to competitive programming, check them out.</h5>
+                </div>
+                <div class="card-foot">
+                    <a href="#popup1"><button id="card-button" class="center">Explore</button></a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.safesystems.com%2Fwp-content%2Fuploads%2F2018%2F04%2F2018-04-04-Six-Costs-to-Consider-When-Implementing-New-Bank-Technology-Featured-Blog-Image.png&f=1&nofb=1" id="card-img-top" alt="">
+                </div>
+                <div class="card-head">
+                    <h3 id="card-head">BLOGS</h3>
+                </div>
+                <div class="card-body">
+                    <h5 id="card-body">Answer to most of the common queestions from the experts in the industries.</h5>
+                </div>
+                <div class="card-foot">
+                    <a href="#popup2"><button id="card-button" class="center">Explore</button></a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.Gf8LjKv_1Jue6LNgiICm3AHaEK%26pid%3DApi&f=1" id="card-img-top" alt="">
+                </div>
+                <div class="card-head">
+                    <h3 id="card-head">COURSES</h3>
+                </div>
+                <div class="card-body">
+                    <h5 id="card-body">Links to most of the trending courses on various sites, just for the beginners.</h5>
+                </div>
+                <div class="card-foot">
+                    <a href="#popup3"><button id="card-button" class="center">Explore</button></a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcotoacademy.com%2Fwp-content%2Fuploads%2F2017%2F08%2Fjob-interview.jpg&f=1&nofb=1" id="card-img-top" alt="">
+                </div>
+                <div class="card-head">
+                    <h3 id="card-head">INTERVIEW PREPARATION</h3>
+                </div>
+                <div class="card-body">
+                    <h5 id="card-body">Want to improve your chances of clearing the interview round,don`t worry, we got your back.</h5>
+                </div>
+                <div class="card-foot">
+                    <a href="#popup4"><button id="card-button" class="center">Explore</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup1">
+        <div class="popup-content">
+          <h1 id="modal-head">Competitive Programming</h1>
+            <div class="modal-body">
+                <input type="text" id="myInput" placeholder="Search Article" onkeyup="myFunction()">
+                <div class="toRemove">
+                    <a href="https://medium.com/@andreimargeloiu/how-to-prepare-for-competitive-programming-396d557e0c12"><h2 class="forSearch">How to prepare for competitive programming ?</h2></a>
+                    <h3>Andrei Margeloiu</h3>
+                    <p>The benefit of Competitive programming however boils down into training your mind to think and act faster in new ways that no conventional programmer is capable of.
+                        Thus the number of questions you solve in competitive coding, the more expert will you become. The analytical and programming skills you possess will be far too better than those who don’t.
+                        That’s why Competitive programming is a MUST!</p>
+                </div>
+                <div class="toRemove">
+                    <a href="https://www.geeksforgeeks.org/what-are-the-best-resources-for-competitive-programming/?ref=lbp"><h2 class="forSearch">Best Resources For Competitive Programming ?</h2></a>
+                    <h3>Anu Upadhyay</h3>
+                    <p>Competitive Programming is the best way to get noticed by top product-based companies and crack interviews there but the question is Where to start?.
+                        Which website is good if you are new to programming? What are some websites and what are the contests to participate and compete with others?</p>
+                </div>
+                <div class="toRemove">
+                    <a href="https://www.geeksforgeeks.org/level-order-tree-traversal/?ref=lbp"><h2 class="forSearch">Level Order Binary Tree Traversal</h2></a>
+                    <h3>Geeks for Geeks</h3>
+                    <p>There are basically two functions in this method. One is to print all nodes at a given level (printGivenLevel),
+                       and other is to print level order traversal of the tree (printLevelorder). printLevelorder makes use of printGivenLevel to print nodes at all levels one by one starting from root.</p>
+                </div>
+                <div class="toRemove">
+                    <a href="https://www.geeksforgeeks.org/unique-paths-in-a-grid-with-obstacles/?ref=lbp"><h2 class="forSearch">Unique paths in a Grid with Obstacles</h2></a>
+                    <h3>Geeks for Geeks</h3>
+                    <p>Given a grid of size m * n, let us assume you are starting at (1, 1) and your goal is to reach (m, n). At any instance, if you are on (x, y), you can either go to (x, y + 1) or (x + 1, y).
+                        Now consider if some obstacles are added to the grids. How many unique paths would there be?
+                        An obstacle and empty space are marked as 1 and 0 respectively in the grid.</p>
+                </div>
+                <div class="toRemove">
+                    <a href="https://www.geeksforgeeks.org/warnsdorffs-algorithm-knights-tour-problem/?ref=lbp"><h2 class="forSearch">Warnsdorff’s algorithm for Knight’s tour problem</h2></a>
+                    <h3>Uddalak Bhaduri</h3>
+                    <p> A knight is placed on the first block of an empty board and, moving according to the rules of chess, must visit each square exactly once.
+                        We have discussed Backtracking Algorithm for solution of Knight’s tour. In this post Warnsdorff’s heuristic is discussed.    </p>
+
+                </div>
+            </div>
+          <a href="#" class="close-popup">&times;</a>
+        </div>
+    </div>
+    <div id="popup2">
+        <div class="popup-content">
+          <h1 id="modal-head">Blogs</h1>
+          <div class="modal-body">
+            <input type="text" id="myInput" placeholder="Search Article" onkeyup="myFunction()">
+            <div class="toRemove">
+                <a href="https://towardsdatascience.com/a-collection-of-advanced-data-visualization-in-matplotlib-and-seaborn-f08136172e14"><h2 class="forSearch">A Collection of Advanced Data Visualization in Matplotlib and Seaborn</h2></a>
+                <h3>Rashida Nasrin Sucky</h3>
+                <p>Python has a few data visualization library. Arguably matplotlib is the most popular and widely used library.This article will focus on some advanced visualization techniques.
+                    These plots and charts will provide you with some extra tools to make your reports or presentations of data in a more efficient and interesting way.</p>
+            </div>
+            <div class="toRemove">
+                <a href="https://uxplanet.org/10-mobile-ux-trends-for-2021-bead97dce9e4"><h2 class="forSearch">10 Mobile UX Trends for 2021</h2></a>
+                <h3>Nick Babich</h3>
+                <p>When 2020 is almost over (fortunately), it’s a perfect moment to explore what we will have in 2021. Here is a list of 10 mobile UX design trends that will shape 2021.</p>
+            </div>
+            <div class="toRemove">
+                <a href="https://towardsdatascience.com/how-to-become-fluent-in-multiple-programming-languages-9f473c146b90"><h2 class="forSearch">How to Become Fluent in Multiple Programming Languages</h2></a>
+                <h3>Madison Hunte</h3>
+                <p>I’ve discovered in the past, learning a new programming language is the same as learning a new natural language. Furthermore, becoming fluent in multiple programming 
+                    languages involves some of the same fundamentals and tips I used when becoming fluent in multiple natural languages.</p>
+            </div>
+            <div class="toRemove">
+                <a href="https://towardsdatascience.com/how-to-become-fluent-in-multiple-programming-languages-9f473c146b90"><h2 class="forSearch">Make Passive Income Programming — 5 Incomes for Software Developers
+                    Grant Darling</h2></a>
+                <h3>Grant Darling</h3>
+                <p>Bar plot is very common. It is hard to avoid bar plots while doing data storytelling. Here is a simple bar plot of the mean car price for each brand.
+                     In the later plot, we will improve it. I put the original numbers on each bar to make it more clear.</p>
+            </div>  
+          </div>  
+          <a href="#" class="close-popup">&times;</a>
+        </div>
+    </div>
+    <div id="popup3">
+        <div class="popup-content">
+          <h1 id="modal-head">Courses</h1>
+          <div class="modal-body">
+            <input type="text" id="myInput" placeholder="Search Article" onkeyup="myFunction()">
+            <div class="toRemove">
+                <a href="https://www.udemy.com/course/the-web-developer-bootcamp/"><h2 class="forSearch">The Web Developer Bootcamp 2020</h2></a>
+                <h3>Colt Steele</h3>
+                <p>When you're learning to program you often have to sacrifice learning the exciting and current technologies in favor of the "beginner friendly" classes.  With this course, you get the best of both worlds.  This is a course designed for the complete beginner, yet it covers some of the most exciting and relevant topics in the industry.</p>
+            </div>
+            <div class="toRemove">
+                <a href="https://www.edx.org/micromasters/edinburghx-predictive-analytics-using-python"><h2 class="forSearch">Predictive Analytics using Python</h2></a>
+                <h3>University of Edinburg</h3>
+                <p>The University of Edinburgh has proved itself to be enormously progressive when it comes to offering courses focused on data and technology, including the Data Science Graduate Apprenticeship launched with PwC. As PwC begins to use artificial intelligence as a way to solve problems in society, we would certainly be keen to see candidates with a MicroMasters in Predictive Analytics.</p>
+            </div>
+            <div class="toRemove">
+                <a href="https://www.udemy.com/course/learn-website-hacking-penetration-testing-from-scratch/"><h2 class="forSearch">Penetration Testing & Bug Bounty Hunting </h2></a>
+                <h3>Zaid Sabih</h3>
+                <p>Welcome to my this comprehensive course on Website penetration testing. In this course you'll learn website / web applications hacking & Bug Bounty hunting! This course assumes you have NO prior knowledge in hacking, and by the end of it you'll be at a high level, being able to hack & discover bugs in websites like black-hat hackers and secure them like security experts!</p>
+            </div>
+            <div class="toRemove">
+                <a href="https://www.udemy.com/course/game-ar-vr-development-on-aws/"><h2 class="forSearch">Game, AR, VR development on AWS </h2></a>
+                <h3>Harshit Srivastava</h3>
+                <p>Game development is a very vast domain full of unprecedented opportunities for new Developers, designers, artists and organizations. Gaming sector is growing very fast at a rapid pace, overtaking filmmaking as an entertainment industry. These days almost everyone has a smartphone and a huge number of smartphone users who are actively playing games.</p>
+            </div>
+          </div>  
+          <a href="#" class="close-popup">&times;</a>
+        </div>
+    </div>
+    <div id="popup4">
+        <div class="popup-content">
+          <h1 id="modal-head">Interview Material</h1>
+          <div class="modal-body">
+            <input type="text" id="myInput" placeholder="Search Article" onkeyup="myFunction()">
+            <div class="toRemove">
+                <a href="https://www.geeksforgeeks.org/ncr-corporation-interview-experience-for-sde-on-campus-2/"><h2 class="forSearch">NCR Corporation Interview Experience for SDE (On-Campus)</h2></a>
+                <h3>Geeks for Geeks</h3>
+            </div>
+            <div class="toRemove">
+                <a href="Swiggy Interview Experience for SDE-1 (Bangalore 1.5 Years Experienced)"><h2 class="forSearch">Swiggy Interview Experience for SDE-1 (Bangalore 1.5 Years Experienced)</h2></a>
+                <h3>Geeks for Geeks</h3>
+            </div>
+            <div class="toRemove">
+                <a href="https://www.geeksforgeeks.org/expedia-interview-experience-set-6-for-sde/?ref=lbp"><h2 class="forSearch">Expedia Interview Experience </h2></a>
+                <h3>Geeks for Geeks</h3>
+            </div>
+            <div class="toRemove">
+                <a href="Microsoft interview experience: | Set 167 (7 Years Experienced)"><h2 class="forSearch">Microsoft interview experience: | Set 167 (7 Years Experienced)</h2></a>
+                <h3>Geeks for Geeks</h3>
+            </div>
+          <a href="#" class="close-popup">&times;</a>
+        </div>
+    </div>
+        
+
+ <script src="src/js/openclose.js"></script>   
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+<script type="module" src="./index.js"></script>
+<script>
+    function myFunction() {
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById("myInput");
+        toRem = document.querySelectorAll(".toRemove");
+        filter = input.value.toUpperCase();
+        li = document.querySelectorAll(".forSearch");
+        for (i = 0; i < li.length; i++) {
+            a = li[i];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                toRem[i].style.display = "";
+            } else {
+                toRem[i].style.display = "none";
+            }
+        }
+    }
+
+</script>
+
+
+
+</body>
+</html>

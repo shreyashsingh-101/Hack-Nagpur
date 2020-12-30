@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Coders Adda</title>
+    <script src="https://kit.fontawesome.com/8ef24dea6d.js" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-firestore.js"></script>
+    <link rel="stylesheet" type="text/css" href="src/css/resources.css">
+    <link rel="stylesheet" type="text/css" href="src/css/team-finder.css">
+
+
+</head>
+
+<body>
+
+
+    <nav class="navbar">
+        <div class="title">
+            <h1>
+                <a href="index.html">// THE CODERS ADDA //</a>  
+            </h1>
+
+        </div>
+        <div class="sign">
+            <h2>
+                <h2 id="login-button" style="display: none;">
+                    Sign In
+                </h2>
+                <h2 id="logout-button" style="display: none;">Logout</h2>
+            </h2>
+            <div class="container">
+                <div class="profile-section">
+                    <a href="profile.html"><img id="profile-picture" src="src/images/profile.jpg" /></a>
+                    <div id="profile-name"></div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </nav>
+    <div id="dash"></div>
+
+    <div id="Sidenav" class="sidenav">
+        <span id="nav-button" style="display:block" onclick="openNav()"><i class="fas fa-bars"></i></span>
+        <div id="int-sec" style="display:none">
+            <span href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fas fa-times"></i></span>
+            <br>
+            <br>
+            <a href="resources.html"><i class="far fa-hand-point-right"></i> Resources</a><br>
+            <a href="forum.html"><i class="far fa-hand-point-right"></i> Doubt</a> <br>
+            <a href="team-finder.html"><i class="far fa-hand-point-right"></i> Team Finder</a><br>
+            <a href="productifier.html"><i class="far fa-hand-point-right"></i> Productivity &emsp; Tracker</a>
+        </div>
+
+    </div>
+
+
+
+    <section class="main-page">
+        <h1 class="heading">
+            Team Finder
+        </h1>
+        <br>
+        <hr>
+        <section class="internal">
+
+            <div class="row">
+                <div id="search">
+                    <form class="search-1" action="" method="get">
+                        <input type="text" name="search_text" id="search_text" placeholder="Search by College" />
+                        <i class="fas fa-search"></i>
+                    </form>
+                </div>
+                <div id="search">
+                    <form class="search-1" action="" method="get">
+                        <input type="text" name="search_text" id="search_text" placeholder="Search by Tech Stack" />
+                        <i class="fas fa-search"></i>
+                    </form>
+                </div>
+            </div>
+
+            <div class="list">
+                <div class="element">
+
+                    <div class="image">
+                        <img src="src/images/profile.jpg" alt="" srcset="">
+                    </div>
+
+                    <div class="name">
+                        <p class="card-para">
+                        <div id="line-name">
+
+                            <div>
+                                Chintu Singh
+                            </div>
+                        </div>
+                        <div id="line-college">
+
+                            <div>
+                                WHITE HAT JUNIOR, GHAZIABAD
+                            </div>
+                        </div>
+                        <div id="line-domain">
+
+                            <div>
+                                ANDROID
+                            </div>
+                        </div>
+
+                        
+
+                        </p>
+                    </div>
+                    <div class="social">
+                        <i class="fab fa-facebook-square"></i>
+                        <i class="fab fa-twitter-square"></i>
+                        <i class="fab fa-github"></i>
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+
+
+                </div>
+
+                <div class="element">
+
+                    <div class="image">
+                        <img src="src/images/profile.jpg" alt="" srcset="">
+                    </div>
+
+                    <div class="name">
+                        <p class="card-para">
+                        <div id="line-name">
+
+                            <div>
+                                Sachin Kumar Gupta
+                            </div>
+                        </div>
+                        <div id="line-college">
+
+                            <div>
+                                KIET GROUP OF INSTITUTIONS, GHAZIABAD
+                            </div>
+                        </div>
+                        <div id="line-domain">
+
+                            <div>
+                                WEB DEVELOPMENT
+                            </div>
+                        </div>
+
+                        
+
+                        </p>
+                    </div>
+                    <div class="social">
+                        <i class="fab fa-facebook-square"></i>
+                        <i class="fab fa-twitter-square"></i>
+                        <i class="fab fa-github"></i>
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+
+
+                </div>
+
+
+                <div class="element">
+
+                    <div class="image">
+                        <img src="src/images/profile.jpg" alt="" srcset="">
+                    </div>
+
+                    <div class="name">
+                        <p class="card-para">
+                        <div id="line-name">
+
+                            <div>
+                                Shreyash Singh
+                            </div>
+                        </div>
+                        <div id="line-college">
+
+                            <div>
+                                KIET GROUP OF INSTITUTIONS, GHAZIABAD
+                            </div>
+                        </div>
+                        <div id="line-domain">
+
+                            <div>
+                                Web-D
+                            </div>
+                        </div>
+
+                        
+
+                        </p>
+                    </div>
+                    <div class="social">
+                        <i class="fab fa-facebook-square"></i>
+                        <i class="fab fa-twitter-square"></i>
+                        <i class="fab fa-github"></i>
+                        <a href="https://www.linkedin.com/in/shreyash-singh-7a3858197/" target="blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+
+
+                </div>
+
+
+                <div class="element">
+
+                    <div class="image">
+                        <img src="src/images/profile.jpg" alt="" srcset="">
+                    </div>
+
+                    <div class="name">
+                        <p class="card-para">
+                        <div id="line-name">
+
+                            <div>
+                                Shreyash Singh
+                            </div>
+                        </div>
+                        <div id="line-college">
+
+                            <div>
+                                KIET GROUP OF INSTITUTIONS, GHAZIABAD
+                            </div>
+                        </div>
+                        <div id="line-domain">
+
+                            <div>
+                                Web-D
+                            </div>
+                        </div>
+
+                        
+
+                        </p>
+                    </div>
+                    <div class="social">
+                        <i class="fab fa-facebook-square"></i>
+                        <i class="fab fa-twitter-square"></i>
+                        <i class="fab fa-github"></i>
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+
+
+                </div>
+
+                <div class="element">
+
+                    <div class="image">
+                        <img src="src/images/profile.jpg" alt="" srcset="">
+                    </div>
+
+                    <div class="name">
+                        <p class="card-para">
+                        <div id="line-name">
+
+                            <div>
+                                Shreyash Singh
+                            </div>
+                        </div>
+                        <div id="line-college">
+
+                            <div>
+                                KIET GROUP OF INSTITUTIONS, GHAZIABAD
+                            </div>
+                        </div>
+                        <div id="line-domain">
+
+                            <div>
+                                Web-D
+                            </div>
+                        </div>
+
+                        
+
+                        </p>
+                    </div>
+                    <div class="social">
+                        <i class="fab fa-facebook-square"></i>
+                        <i class="fab fa-twitter-square"></i>
+                        <i class="fab fa-github"></i>
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+
+
+                </div>
+
+                <div class="element">
+
+                    <div class="image">
+                        <img src="src/images/profile.jpg" alt="" srcset="">
+                    </div>
+
+                    <div class="name">
+                        <p class="card-para">
+                        <div id="line-name">
+
+                            <div>
+                                Shreyash Singh
+                            </div>
+                        </div>
+                        <div id="line-college">
+
+                            <div>
+                                KIET GROUP OF INSTITUTIONS, GHAZIABAD
+                            </div>
+                        </div>
+                        <div id="line-domain">
+
+                            <div>
+                                Web-D
+                            </div>
+                        </div>
+
+                        
+
+                        </p>
+                    </div>
+                    <div class="social">
+                        <i class="fab fa-facebook-square"></i>
+                        <i class="fab fa-twitter-square"></i>
+                        <i class="fab fa-github"></i>
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+
+
+        </section>
+
+
+    </section>
+
+
+
+
+
+
+
+    <script src="src/js/openclose.js">
+
+    </script>
+
+    <script type="module" src="./index.js"></script>
+</body>
+
+
+
+
+
+</html>

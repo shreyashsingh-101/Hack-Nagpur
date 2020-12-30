@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Coders Adda</title>
+    <script src="https://kit.fontawesome.com/8ef24dea6d.js" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-firestore.js"></script>
+    <link rel="stylesheet" type="text/css" href="/src/css/resources.css">
+    <link rel="stylesheet" type="text/css" href="/src/css/forum.css">
+
+</head>
+
+<body>
+
+
+    <nav class="navbar">
+        <div class="title">
+            <h1>
+                <a href="index.html">// THE CODERS ADDA //</a>
+            </h1>
+
+        </div>
+        <div class="sign">
+            <h2>
+                <h2 id="login-button" style="display: none;">
+                    Sign In
+                </h2>
+                <h2 id="logout-button" style="display: none;">Logout</h2>
+            </h2>
+            <div class="container">
+                <div class="profile-section">
+                    <a href="../profile.html"><img id="profile-picture" src="src/images/profile.jpg" /></a>
+                    <div id="profile-name"></div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </nav>
+    <div id="dash"></div>
+
+    <div id="Sidenav" class="sidenav">
+        <span id="nav-button" style="display:block" onclick="openNav()"><i class="fas fa-bars"></i></span>
+        <div id="int-sec" style="display:none">
+            <span href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fas fa-times"></i></span>
+            <br>
+            <br>
+            <a href="../resources.html"><i class="far fa-hand-point-right"></i> Resources</a><br>
+            <a href="../forum.html"><i class="far fa-hand-point-right"></i> Doubt</a> <br>
+            <a href="../team-finder.html"><i class="far fa-hand-point-right"></i> Team Finder</a><br>
+            <a href="../productifier.html"><i class="far fa-hand-point-right"></i> Productivity &emsp; Tracker</a>
+        </div>
+
+    </div>
+
+
+
+    <section class="main-page">
+        <h1 class="heading">
+            Doubt Solving
+        </h1>
+        <hr>
+
+        <div class="doubt">
+
+
+           
+
+
+
+            <h1 class="ctitle">
+              Q:-  <%= thd.title %>
+            </h1>
+            <hr id="hr2">
+            <h3 class="cdesc">
+                <%= thd.description %>
+            </h3>
+
+
+            <ul class="clist">
+                <h1 class="chead">Comments</h1>
+                <% if(thd.comments.length> 0) { %>
+                    <% for (let comment of thd.comments) { %>
+                        <li>
+                            
+                          <p class="comment">    <%= comment.comment %>     </p>
+                                <p>By: <%= comment.author %>
+                                </p>
+                        </li>
+                        <% } %>
+                            <% } else { %>
+                                <li>No Comment</li>
+                                <% } %>
+            </ul>
+
+
+
+
+            <form class="cform" action="/addComment/<%= thd._id %>" method="POST">
+                
+
+                <textarea name="comment" id="comment" cols="20" rows="6" placeholder="Add a comment"></textarea><br>
+                
+                <input type="hidden" name="author" id="defaultValue">
+                <button type="submit">Submit</button>
+            </form>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    </section>
+
+
+
+
+
+
+
+    <script src="/src/js/openclose.js">
+
+    </script>
+
+
+    <script type="module" src="/index.js"></script>
+
+</body>
+
+
+
+
+
+</html>

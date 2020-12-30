@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Coders Adda</title>
+    <script src="https://kit.fontawesome.com/8ef24dea6d.js" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-firestore.js"></script>
+    <link rel="stylesheet" type="text/css" href="src/css/resources.css">
+    <link rel="stylesheet" type="text/css" href="src/css/profile.css">
+   
+
+
+</head>
+
+<body>
+
+
+    <nav class="navbar">
+        <div class="title">
+            <h1>
+                <a href="index.html">// THE CODERS ADDA //</a>  
+            </h1>
+
+        </div>
+        <div class="sign">
+            <h2>
+                <h2 id="login-button" style="display: none;">
+                    Sign In
+                </h2>
+                <h2 id="logout-button" style="display: none;">Logout</h2>
+            </h2>
+            <div class="container">
+                <div class="profile-section">
+                    <img id="profile-picture" src="" />
+                    <div id="profile-name"></div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </nav>
+    <div id="dash"></div>
+
+    <div id="Sidenav" class="sidenav">
+        <span id="nav-button" style="display:block" onclick="openNav()"><i class="fas fa-bars"></i></span>
+        <div id="int-sec" style="display:none">
+            <span href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fas fa-times"></i></span>
+            <br>
+            <br>
+            <a href="resources.html"><i class="far fa-hand-point-right"></i> Resources</a><br>
+            <a href="forum.html"><i class="far fa-hand-point-right"></i> Doubt</a> <br>
+            <a href="team-finder.html"><i class="far fa-hand-point-right"></i> Team Finder</a><br>
+            <a href="productifier.html"><i class="far fa-hand-point-right"></i> Productivity &emsp; Tracker</a>
+        </div>
+
+    </div>
+
+
+
+    <section class="profile-page">
+
+        <div class="top">
+            <div class="container">
+                <div class="profile">
+                    <img id="picture" src="" />
+                    <div id="name"></div>
+                    <div id="email"></div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="mid">
+            <h1>
+                Your Adda Profile
+            </h1>
+            <div class="element" id="random">
+                <div class="field">
+                    <label for="Domain-name">Domain name: </label>
+                    <label for="hide">WEB DEVELOPMENT </label>
+                    <input type="text" name="Domain-name" id="Domain-name" value="WEB DEVELOPMENT"
+                        style="display:none;"><br>
+                </div>
+                <div class="field">
+                    <label for="College-name">College name: </label>
+                    <label for="hide"> KIET </label>
+                    <input type="text" name="College-name" id="College-name" value="KIET"
+                        style="display:none;"><br>
+                </div>
+                <div class="field">
+                    <label for="Contact-email">Contact email: </label>
+                    <label for="hide"> abc@gmail.com </label>
+                    <input type="text" name="Contact-email" id="Contact-email" value="abc@gmail.com"
+                    style="display:none;"><br>
+                </div>
+                <div class="field">
+                    <label for="Github-Link">GitHub Link: </label>
+                    <label for="hide"> Link </label>
+                    <input type="text" name="Github-Link" id="Github-Link"
+                        value="Link" style="display:none;">
+                </div>
+                <div class="field">
+                    <label for="Linkedin-Link">LinkedIn Link: </label>
+                    <label for="hide"> Link </label>
+                    <input type="text" name="Linkedin-Link" id="Linkedin-Link"
+                        value="Link" style="display:none;">
+                </div>
+                <div class="field">
+                    <label for="Facebook-Link">Facebook Link: </label>
+                    <label for="hide"> Link </label>
+                    <input type="text" name="Facebook-Link" id="Facebook-Link"
+                        value="Link" style="display:none;">
+                </div>
+                <div class="field">
+                    <label for="Twitter-Link">Twitter Link: </label>
+                    <label for="hide"> Link </label>
+                    <input type="text" name="Twitter-Link" id="Twitter-Link"
+                        value="Link" style="display:none;">
+                </div>
+
+               
+
+                <div class="buttons">
+                    <input id="Submit-button" type="submit" value="Update" style="display:none;">
+                    <button id="edit" class="edit">Edit</button>
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+
+
+    </section>
+
+
+
+
+
+
+
+    <script src="src/js/openclose.js">
+
+    </script>
+
+    <script type="module" src="./index.js"></script>
+    <script type="module" src="./profile.js"></script>
+    <script src="profile.js"></script>
+
+</body>
+
+
+
+
+
+</html>

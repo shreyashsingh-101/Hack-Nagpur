@@ -1,0 +1,255 @@
+hr{
+    width: 40%;
+    height: 3px;
+    margin: auto;
+    margin-top: 20px;
+    background-color: black;
+}
+
+
+.main-page{
+    box-shadow:  0px 0px 300px 30px rgb(216, 38, 7),8px 4px 20px 2px rgb(216,38,7), -2px -1px 20px 2px rgb(216,38,7);
+}
+
+
+#myInput{
+    width: 100%;
+    border: none;
+    margin: auto;
+    padding: 10px;
+    color: black;
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 12px 2px lightgray;
+    font-size: 1.2em;
+}
+
+.forum{
+    display: flex;
+}
+
+.display-thread{
+    flex: 1.5;
+    margin: 20px;
+    overflow: auto;
+    padding: 40px;
+    margin-top: 10px;
+}
+
+
+.int-sec{
+    overflow: auto;
+    height: 390px;
+}
+
+.toRemove{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 20px 4px rgb(179, 179, 179); 
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+.int-sec ul li a{
+    color: black;
+    font-size: 2em;
+    text-decoration: none;
+    margin-bottom: 40px;
+}
+.int-sec ul{
+    list-style: none;
+}
+.desc{
+    color: black;
+    margin-top: 20px;
+    padding: 10px;
+}
+.category span{
+    color: black;
+    margin-top: 40px;
+    padding: 10px;
+}
+
+
+   
+
+.category{
+    margin-top: 10px;
+    font-size: 1.5em;
+}
+
+/* New Thread */
+
+.new-thread{
+    flex: .5;
+    margin: 20px;
+    padding: 40px;
+    background-color: rgb(255, 255, 255);
+    height: 400px;
+    margin-top: 80px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 12px 4px rgba(128, 128, 128, 0.555);
+}
+.heading2{
+    margin-top: 5px;
+    font-size: 1.5em;
+    color: black;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.new-thread form{
+    justify-content: center;
+}
+
+.new-thread form input, .new-thread form textarea{
+    margin-top: 20px;
+    width: 100%;
+    border: none;
+    background-color: white;
+    font-size: 1em;
+    border-bottom: 2px solid rgba(190, 9, 9, 0.795);
+    color:black;
+}
+
+.new-thread form textarea{
+    border: 2px solid rgba(190, 9, 9, 0.795);
+}
+
+
+.new-thread form button{
+    margin-top: 20px;
+    margin-left: 32%;
+    border: none;
+    font-size: 1.2em;
+    padding: 10px;
+    background-color: rgb(2, 170, 236);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.new-thread form button:hover{
+    background-color: rgb(5, 95, 131);
+}
+
+
+
+/* Scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+    width: 9px;
+    height:50%;
+}
+
+
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: none;
+    margin-right: 10px;
+    margin-top: 2px;
+    margin-bottom: 10px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgba(100, 100, 100, 0.712);
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(43, 43, 43, 0.671);
+  }
+
+
+
+  /* Comment Section */
+
+  .doubt{
+      margin: 20px;
+      padding: 40px;
+      height: 60vh;
+      overflow: auto;
+  }
+
+
+  .ctitle{
+    color:black;
+    font-size:2em;
+    margin-bottom: 20px;
+  }
+
+  #hr2{
+      background-color: black;
+      width:80%;
+      margin-left: 0;
+
+  }
+
+  .cdesc{
+      margin-top: 40px; 
+      color: black;
+      background-color: white;
+      padding:40px;
+      border-radius: 25px;
+      font-size: 1.5em;
+      line-height: 1.5;
+  }
+
+
+
+  .clist{
+      list-style-type:none;
+      padding-top: 40px;
+  }
+
+  .chead{
+      margin-top: 10px;
+      color: black;
+      font-size: 1.9em;
+  }
+
+
+  .clist li{
+      color:black;
+  }
+
+  .clist li p{
+      color:black;
+      text-align: right;
+      margin-right: 50px;
+  }
+
+  .cform button{
+    margin-top: 20px;
+    margin-left: 45%;
+    border: none;
+    font-size: 1.2em;
+    padding: 10px;
+    background-color: rgb(2, 170, 236);
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .cform textarea{
+    margin: 20px;
+    width: 100%;
+    border: none;
+    background-color: white;
+    font-size: 1em;
+    padding: 20px;
+    border-radius: 25px;
+    color:black;
+    white-space: pre-wrap; overflow-wrap: break-word;
+    
+  }
+
+  .comment{
+    text-align: left !important;
+    margin: 20px;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    white-space: pre-wrap; overflow-wrap: break-word;
+  }
